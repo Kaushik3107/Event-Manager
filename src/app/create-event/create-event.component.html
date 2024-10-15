@@ -1,0 +1,61 @@
+<div class="container mt-5">
+  <h2>Create Event</h2>
+  <form (submit)="createEvent()">
+    <div class="form-group">
+      <label for="title">Event Title</label>
+      <input
+        type="text"
+        id="title"
+        class="form-control"
+        [(ngModel)]="event.title"
+        name="title"
+        required
+      />
+    </div>
+    <div class="form-group mt-3">
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        class="form-control"
+        [(ngModel)]="event.description"
+        name="description"
+        rows="3"
+        required
+      ></textarea>
+    </div>
+    <div class="form-group mt-3">
+      <label for="date">Event Date</label>
+      <input
+        type="datetime-local"
+        id="date"
+        class="form-control"
+        [(ngModel)]="event.date"
+        name="date"
+        required
+      />
+    </div>
+    <div class="form-group mt-3">
+      <label for="location">Location</label>
+      <input
+        type="text"
+        id="location"
+        class="form-control"
+        [(ngModel)]="event.location"
+        name="location"
+        required
+      />
+    </div>
+    <div class="form-group mt-3">
+      <label for="maxAttendees">Max Attendees</label>
+      <input
+        type="number"
+        id="maxAttendees"
+        class="form-control"
+        [(ngModel)]="event.maxAttendees"
+        name="maxAttendees"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Create Event</button>
+  </form>
+</div>
